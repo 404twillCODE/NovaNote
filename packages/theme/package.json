@@ -1,0 +1,13 @@
+{
+  "name": "@novanote/theme",
+  "version": "0.0.1",
+  "private": true,
+  "main": "tailwind.config.preset.js",
+  "exports": {
+    ".": "./tailwind.config.preset.js",
+    "./preset": "./tailwind.config.preset.js"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.0.0"
+  }
+}

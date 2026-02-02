@@ -1,0 +1,17 @@
+{
+  "name": "novanote",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm run --parallel dev:web dev:desktop",
+    "dev:web": "pnpm --filter @novanote/web dev",
+    "dev:desktop": "pnpm --filter @novanote/desktop dev",
+    "build": "pnpm build:tokens && pnpm run --parallel build:web build:desktop",
+    "build:tokens": "pnpm --filter @novanote/tokens build && node -e \"require('fs').copyFileSync('packages/tokens/dist/tokens.generated.json', 'apps/ipad/tokens.generated.json')\"",
+    "build:ui": "pnpm --filter @novanote/ui build",
+    "build:web": "pnpm build:tokens && pnpm build:ui && pnpm --filter @novanote/web build",
+    "build:desktop": "pnpm build:tokens && pnpm build:ui && pnpm --filter @novanote/desktop build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

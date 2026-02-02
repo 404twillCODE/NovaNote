@@ -1,0 +1,15 @@
+{
+  "name": "@novanote/tokens",
+  "version": "0.0.1",
+  "private": true,
+  "main": "dist/tokens.generated.json",
+  "exports": {
+    ".": "./dist/tokens.generated.json",
+    "./tokens.css": "./dist/tokens.css"
+  },
+  "scripts": {
+    "build": "node build.js",
+    "prepare": "node build.js"
+  },
+  "files": ["dist"]
+}

@@ -1,0 +1,9 @@
+[
+  {
+    "id": "hello-panel",
+    "name": "Hello Panel",
+    "description": "Example plugin that shows a panel and registers a command",
+    "author": "NovaNote",
+    "version": "1.0.0"
+  }
+]
