@@ -5,7 +5,7 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {}
 export function Card({ className = '', children, ...props }: CardProps) {
   return (
     <div
-      className={`bg-elevated border border-border rounded-nova-lg shadow-nova-sm p-4 ${className}`}
+      className={`bg-elevated border border-border rounded-nova-lg shadow-nova-sm p-4 transition-colors duration-[var(--nova-motion-fast)] ${className}`}
       {...props}
     >
       {children}
@@ -16,7 +16,8 @@ export function Card({ className = '', children, ...props }: CardProps) {
 export function GlassCard({ className = '', children, ...props }: CardProps) {
   return (
     <div
-      className={`bg-panel/80 border border-border rounded-nova-lg shadow-nova-md backdrop-blur-nova-panel p-4 ${className}`}
+      className={`bg-panel/50 border border-border/80 rounded-nova-lg shadow-nova-md backdrop-blur-[var(--nova-blur-panelBlur)] p-4 transition-colors duration-[var(--nova-motion-fast)] ${className}`}
+      style={{ transitionTimingFunction: 'var(--nova-motion-ease)' }}
       {...props}
     >
       {children}

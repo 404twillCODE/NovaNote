@@ -9,7 +9,7 @@ export function Toggle({ label, className = '', ...props }: ToggleProps) {
     <label className={`inline-flex items-center gap-2 cursor-pointer ${className}`}>
       <input
         type="checkbox"
-        className="w-10 h-6 rounded-full bg-panel border border-border appearance-none cursor-pointer checked:bg-accent transition-nova-fast transition-nova-ease focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-bg [&:not(:checked)]:bg-panel"
+        className="w-10 h-6 rounded-full bg-panel border border-border appearance-none cursor-pointer checked:bg-accent transition-[var(--nova-motion-fast)] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg [&:not(:checked)]:bg-panel"
         style={{ boxShadow: 'inset 0 0 0 2px var(--nova-colors-border)' }}
         {...props}
       />

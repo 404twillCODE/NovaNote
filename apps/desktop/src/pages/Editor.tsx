@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Topbar, Sidebar, Button } from '@novanote/ui';
+import { Topbar, Sidebar, Button, Toast } from '@novanote/ui';
 import * as editorState from '../editorState';
 import { createBridge } from '../pluginBridge';
 
@@ -66,7 +66,7 @@ export default function Editor() {
       </Sidebar>
       <div className="flex-1 flex flex-col min-w-0">
         <Topbar className="justify-between flex-shrink-0">
-          <span className="font-semibold text-accent">Editor</span>
+          <span className="font-semibold text-accent tracking-tight">Editor</span>
           <Link to="/settings">
             <Button variant="ghost" className="text-sm">Settings</Button>
           </Link>
@@ -89,7 +89,7 @@ export default function Editor() {
             <div className="p-2 border-b border-border flex justify-between items-center">
               <span className="text-sm text-muted">Plugin panel</span>
               {panelPluginId && (
-                <button className="text-xs text-muted hover:text-text" onClick={closePanel}>Close</button>
+                <button className="text-xs text-muted hover:text-text transition-colors duration-[var(--nova-motion-fast)]" onClick={closePanel}>Close</button>
               )}
             </div>
             <div className="flex-1 overflow-auto p-2">
@@ -112,11 +112,7 @@ export default function Editor() {
           </div>
         </div>
       </div>
-      {toast && (
-        <div className="fixed bottom-4 right-4 z-50 px-4 py-3 bg-elevated border border-accent rounded-nova-md shadow-nova-lg text-accent text-sm">
-          {toast.message}
-        </div>
-      )}
+      <Toast message={toast?.message ?? ''} visible={!!toast} type={toast?.type} />
     </div>
   );
 }

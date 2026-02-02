@@ -5,13 +5,13 @@ module.exports = {
     extend: {
       colors: {
         bg: 'var(--nova-colors-bg)',
-        elevated: 'var(--nova-colors-bgElevated)',
+        elevated: 'var(--nova-colors-bgelevated)',
         panel: 'var(--nova-colors-panel)',
         border: 'var(--nova-colors-border)',
         text: 'var(--nova-colors-text)',
-        muted: 'var(--nova-colors-textMuted)',
-        accent: 'var(--nova-colors-accentTeal)',
-        accentBlue: 'var(--nova-colors-accentBlue)',
+        muted: 'var(--nova-colors-textmuted)',
+        accent: 'var(--nova-colors-accentteal)',
+        accentBlue: 'var(--nova-colors-accentblue)',
         danger: 'var(--nova-colors-danger)',
         success: 'var(--nova-colors-success)',
       },
@@ -25,9 +25,10 @@ module.exports = {
         'nova-sm': 'var(--nova-shadow-sm)',
         'nova-md': 'var(--nova-shadow-md)',
         'nova-lg': 'var(--nova-shadow-lg)',
+        'nova-glow': 'var(--nova-shadow-glow)',
       },
       backdropBlur: {
-        'nova-panel': 'var(--nova-blur-panelBlur)',
+        'nova-panel': 'var(--nova-blur-panelblur)',
       },
       transitionDuration: {
         'nova-fast': 'var(--nova-motion-fast)',

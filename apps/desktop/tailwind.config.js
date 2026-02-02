@@ -30,9 +30,10 @@ export default {
         'nova-sm': 'var(--nova-shadow-sm)',
         'nova-md': 'var(--nova-shadow-md)',
         'nova-lg': 'var(--nova-shadow-lg)',
+        'nova-glow': 'var(--nova-shadow-glow)',
       },
       backdropBlur: {
-        'nova-panel': 'var(--nova-blur-panelBlur)',
+        'nova-panel': 'var(--nova-blur-panelblur)',
       },
       transitionDuration: {
         'nova-fast': 'var(--nova-motion-fast)',

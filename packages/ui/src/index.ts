@@ -6,4 +6,5 @@ export { Modal } from './Modal';
 export { Toggle } from './Toggle';
 export { Input } from './Input';
 export { Toast } from './Toast';
-export { FadeIn, HoverLift } from './motion';
+export { FadeIn, HoverLift, PageTransition, SlidePanel } from './motion';
+export { NovaRing } from './NovaRing';

@@ -7,7 +7,7 @@ export interface SidebarProps extends HTMLAttributes<HTMLElement> {
 export function Sidebar({ className = '', children, width = '240px', ...props }: SidebarProps) {
   return (
     <aside
-      className={`bg-elevated border-r border-border flex flex-col ${className}`}
+      className={`flex flex-col border-r border-border/80 backdrop-blur-[var(--nova-blur-panelBlur)] bg-elevated/80 ${className}`}
       style={{ width }}
       {...props}
     >

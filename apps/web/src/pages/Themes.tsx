@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Card } from '@novanote/ui';
+import { GlassCard, HoverLift } from '@novanote/ui';
 
 interface Theme {
   id: string;
@@ -20,16 +20,19 @@ export default function Themes() {
   }, []);
 
   return (
-    <div className="max-w-2xl">
-      <h1 className="text-2xl font-bold text-text mb-4">Themes</h1>
-      <div className="grid gap-4">
+    <div className="max-w-4xl mx-auto">
+      <h1 className="text-3xl font-bold text-text tracking-tight mb-2">Themes</h1>
+      <p className="text-muted mb-8">Apple-dark and nova glow. Pick a theme.</p>
+      <div className="grid gap-4 sm:grid-cols-2">
         {themes.map((t) => (
-          <Link key={t.id} to={`/themes/${t.id}`}>
-            <Card className="hover:border-accent transition-nova-fast cursor-pointer">
-              <h2 className="font-semibold text-text">{t.name}</h2>
-              <p className="text-sm text-muted">{t.description}</p>
-            </Card>
-          </Link>
+          <HoverLift key={t.id} lift={4}>
+            <Link to={`/themes/${t.id}`}>
+              <GlassCard className="h-full cursor-pointer border-border/80 hover:border-accent/30 transition-colors duration-[var(--nova-motion-fast)]">
+                <h2 className="font-semibold text-text tracking-tight mb-2">{t.name}</h2>
+                <p className="text-sm text-muted">{t.description}</p>
+              </GlassCard>
+            </Link>
+          </HoverLift>
         ))}
       </div>
     </div>
