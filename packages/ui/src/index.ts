@@ -1,6 +1,12 @@
 export { Button } from './Button';
 export { Card, GlassCard } from './Card';
+export { Container } from './Container';
+export { IconButton } from './IconButton';
+export { NavLink } from './NavLink';
+export { SectionHeader } from './SectionHeader';
+export { ScreenshotFrame } from './ScreenshotFrame';
 export { Sidebar } from './Sidebar';
+export { SplitPane } from './SplitPane';
 export { Topbar } from './Topbar';
 export { Modal } from './Modal';
 export { Toggle } from './Toggle';
